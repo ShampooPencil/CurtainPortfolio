@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css" /> 
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+        <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+        <title>CodePen - Curtain Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <style>
+          * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Miriam Libre', sans-serif;
+          min-width: 300px;
+        }
+        
+        .menu-trigger {
+          cursor: pointer;
+          position: fixed;
+          padding: 1rem;
+          top: 0;
+          right: 0;
+          z-index: 100;
+          color: black;
+          -webkit-transform: rotate(225deg);
+                  transform: rotate(225deg);
+          transition: all 350ms ease;
+        }
+        .menu-trigger.open {
+          color: white;
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+        }
+        
+        header {
+          width: 100%;
+          height: 100vh;
+          float: left;
+          font-size: 1rem;
+          line-height: 1;
+          letter-spacing: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgb(82, 245, 234);
+        }
+        @media (min-width: 500px) {
+          header {
+            font-size: 2rem;
+          }
+        }
+        header .display-block {
+          display: block;
+        }
+        
+        #nav-overlay {
+          overflow: hidden;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+        }
+        #nav-overlay nav {
+          width: 100%;
+          overflow: hidden;
+          position: absolute;
+          top: -100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          list-style: none;
+          z-index: 90;
+          transition: top 350ms ease;
+        }
+        #nav-overlay nav li {
+          display: block;
+          text-align: center;
+          margin: 1rem 0;
+        }
+        #nav-overlay nav a, #nav-overlay nav a:visited {
+          font-size: 3rem;
+          font-weight: 400;
+          letter-spacing: 15px;
+          line-height: 1.25;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: white;
+        }
+        #nav-overlay nav a:hover, #nav-overlay nav a:focus, #nav-overlay nav a:visited, #nav-overlay nav a:visited:hover, #nav-overlay nav a:visited:focus, #nav-overlay nav a:visited:visited {
+          text-decoration: underline;
+        }
+        #nav-overlay.open nav {
+          top: 0;
+        }
+        #nav-overlay:before, #nav-overlay:after {
+          content: "";
+          position: absolute;
+          z-index: 50;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: blue;
+          transition: transform 350ms, -webkit-transform 350ms;
+          background-image: url("../public/images/rainbowLines.jpg");
+          background-size: cover;
+          background-repeat: repeat;
+          background-position: center center;
+        }
+        #nav-overlay:before {
+          left: 0;
+          -webkit-transform: skew(50deg) translateX(-200%);
+                  transform: skew(50deg) translateX(-200%);
+          clip: rect(auto 50vw auto auto);
+        }
+        @media (min-width: 500px) {
+          #nav-overlay:before {
+            -webkit-transform: skew(50deg) translateX(-150%);
+                    transform: skew(50deg) translateX(-150%);
+          }
+        }
+        #nav-overlay.open:before {
+          -webkit-transform: skew(0) translateX(0%);
+                  transform: skew(0) translateX(0%);
+        }
+        #nav-overlay:after {
+          right: 0;
+          -webkit-transform: skew(50deg) translateX(200%);
+                  transform: skew(50deg) translateX(200%);
+          clip: rect(auto auto auto 50vw);
+        }
+        @media (min-width: 500px) {
+          #nav-overlay:after {
+            -webkit-transform: skew(50deg) translateX(150%);
+                    transform: skew(50deg) translateX(150%);
+          }
+        }
+        #nav-overlay.open:after {
+          -webkit-transform: skew(0) translateX(0%);
+                  transform: skew(0) translateX(0%);
+        }
+        
+        .icon {
+          display: inline-block;
+          font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .icon.icon-menu:before {
+          content: '\f136';
+          font-size: 3rem;
+        }
+        
+        .screen-reader-text {
+          position: absolute;
+          left: -999999em;
+        }
+        </style>
+        <script>
+          window.console = window.console || function(t) {};
+        </script>
+        <script>
+          if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+          }
+        </script>
+        </head>
+</head>
+
+<body>
+    <span class="menu-trigger trigger icon icon-menu" rel="nav-overlay"></span>
+    <header>
+        <h1>
+            <span class="display-block firstName">Andrew</span>
+            <span class="display-block lastName">Aramouni's</span>
+            <span class="display-block portfolio">Portfolio</span>
+        </h1>
+    </header>
+    <div id="nav-overlay">
+        <nav>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Shop</a></li>
+            <li><a href="/">Look</a></li>
+            <li><a href="/">News</a></li>
+        </nav>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <script src="../public/jQuery/curtainScreen.js"></script>
+</body>
+
+</html>
