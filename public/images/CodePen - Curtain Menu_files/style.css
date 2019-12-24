@@ -296,7 +296,6 @@
     margin: 5px;
     padding: 5px;
   }
-  
   .collapsible {
     /* background-color: #777; */
     color: white;
@@ -306,35 +305,17 @@
     border: none;
     text-align: left;
     outline: none;
-    font-size: 35px; 
-    background: none;
+    /* font-size: 15px; */
   }
   
-  .active, .collapsible:hover {
-    /* background-color: #555; */
-    text-decoration: underline;
-  }
+  /* .active, .collapsible:hover {
+    background-color: #555;
+  } */
   
   .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    /* background-color: #f1f1f1; */
-
+    background-color: #f1f1f1;
   }
   
-  #special1, #special2, #special3{ 
-    display: none;
-    color: white;
-    border: 2px white dotted;
-    border-top: none;
-   }
-   /* #special2{
-    display: none;
-    color: white;
-    border: 2px white dotted;
-    border-top: none;
-   } */
-  #button-1 #button-2 #button-3{
-    background: none;
-  }
