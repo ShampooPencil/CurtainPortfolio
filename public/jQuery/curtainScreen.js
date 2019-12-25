@@ -34,6 +34,8 @@ $(document).ready(function() {
       // $("listItem").css("fontSize", "100px");
       // $( "h1" ).height( "50px" );
       $("#special1").toggle();
+      $("#special2").hide();
+      $("#special3").hide();
       //$( "li" ).height( "50px" );
       // var text_input = $('#button-1');
       // text_input.css("font-size", "50px");
@@ -44,28 +46,19 @@ $(document).ready(function() {
     
     $("#button-2").click(function(){
       $('#special2').toggle();
+      $("#special1").hide();
+      $("#special3").hide();
       $('#listItem2').animate({
         fontSize: $('#listItem2').css('font-size') == '35px' ? '50px' : '35px'
       });
     });
     $("#button-3").click(function(){
       $('#special3').toggle();
+      $("#special2").hide();
+      $("#special1").hide();
       $('#listItem3').animate({
         fontSize: $('#listItem3').css('font-size') == '35px' ? '50px' : '35px'
       });
     });
-    
-      // $("#listItem2").animate({
-      //   fontSize: $('#listItem2').css('font-size') == '35px' ? '50px' : '35px'
-      // });
-      // $("#listItem3").animate({
-      //   fontSize: $('#listItem3').css('font-size') == '35px' ? '50px' : '35px'
-      // });
-
-     
-      
-      // $("#btn2").click(function(){
-      //   $("#box").animate({height: "100px"});
-      // });
   
 })
