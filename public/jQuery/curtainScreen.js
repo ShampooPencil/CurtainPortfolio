@@ -30,6 +30,9 @@ $(document).ready(function() {
 
   //for expanding the list items HOME, ABOUT etc.
   $(document).ready(function(){
+    var listItem = $('#listItem');
+    var listItem2 = $('#listItem2');
+    var listItem3 = $('#listItem3');
     $("#button-1").click(function(){
       // $("listItem").css("fontSize", "100px");
       // $( "h1" ).height( "50px" );
@@ -39,6 +42,8 @@ $(document).ready(function() {
       //$( "li" ).height( "50px" );
       // var text_input = $('#button-1');
       // text_input.css("font-size", "50px");
+      listItem2.css("font-size", '35px');
+      listItem3.css("font-size", '35px');
       $("#listItem").animate({
         fontSize: $('#listItem').css('font-size') == '35px' ? '50px' : '35px'
       });
@@ -48,6 +53,11 @@ $(document).ready(function() {
       $('#special2').toggle();
       $("#special1").hide();
       $("#special3").hide();
+      // var listItem = $('#listItem');
+      listItem.css("font-size", '35px');
+      listItem3.css("font-size", '35px');
+      // $("listItem1").css('font-size', '35');
+      // $("listItem3").css('font-size', '35');
       $('#listItem2').animate({
         fontSize: $('#listItem2').css('font-size') == '35px' ? '50px' : '35px'
       });
@@ -56,6 +66,8 @@ $(document).ready(function() {
       $('#special3').toggle();
       $("#special2").hide();
       $("#special1").hide();
+      listItem.css("font-size", '35px');
+      listItem2.css("font-size", '35px');
       $('#listItem3').animate({
         fontSize: $('#listItem3').css('font-size') == '35px' ? '50px' : '35px'
       });
