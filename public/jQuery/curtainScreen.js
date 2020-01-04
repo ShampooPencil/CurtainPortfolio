@@ -74,3 +74,12 @@ $(document).ready(function() {
     });
   
 })
+$(document).ready(function() {
+  $('#sidebar-btn').on('click', function() {
+    $('#sidebar').toggleClass('visible');
+  });
+});
+
+/* 12/26/19..... clicking on links are set. now, i want to put side bar in the site, but after i put the right
+content in the links after getting clicked on. Like, really put my work, education, 
+etc. but seriously looking great! Keep working on it!*/ 

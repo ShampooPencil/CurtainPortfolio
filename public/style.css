@@ -304,10 +304,13 @@
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    /* text-align: left; */
+    text-align: center;
     outline: none;
     font-size: 35px; 
     background: none;
+    /* display: inline-block; */
+    
   }
   
   .active, .collapsible:hover {
@@ -328,6 +331,16 @@
     color: white;
     border: 2px white dotted;
     border-top: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: auto; */
+    width: 80%;
+    
+   }
+
+   p{
+     text-align: center;
    }
    /* #special2{
     display: none;
@@ -338,3 +351,65 @@
   #button-1 #button-2 #button-3{
     background: none;
   }
+  
+  #sidebar {
+    width: 200px;
+    background: #2c3e50;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left 0.5s ease;
+    font-size: 20px;
+  }
+  
+  #sidebar.visible {
+    left: 0px;
+    transition: left 0.7s ease;
+  }
+  
+  /* ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    background: #46637F;
+    border-bottom: 1px solid #233140;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+  } */
+  
+  #sidebar-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    margin: 20px;
+    position: absolute;
+    right: -60px;
+    top: 0px;
+  }
+  
+  #sidebar-btn span {
+    background-color: white;
+    height: 1px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #sidebar-btn span:nth-child(2) {
+    width: 75%;
+  }
+
+  /* sidebar links styles etc. */
+  #face_book #linked_in #git_hub {
+    font-size: 20px;
+  }
+  
