@@ -33,9 +33,17 @@ $(document).ready(function() {
     var listItem = $('#listItem');
     var listItem2 = $('#listItem2');
     var listItem3 = $('#listItem3');
+    var sideBar = $("#sideBar");
     $("#button-1").click(function(){
       // $("listItem").css("fontSize", "100px");
       // $( "h1" ).height( "50px" );
+      // if(sideBar == $("#sideBar").css("display", "visible")){
+      //   $("#sideBar-btn").click(function(){
+      //     $("#sideBar").hide();
+      //   })
+      // }
+      // $("#sidebar").hide();
+      // $("#sidebar-btn").css("display", "visible");
       $("#special1").toggle();
       $("#special2").hide();
       $("#special3").hide();
@@ -44,6 +52,9 @@ $(document).ready(function() {
       // text_input.css("font-size", "50px");
       listItem2.css("font-size", '35px');
       listItem3.css("font-size", '35px');
+      $("#sidebar").animate({
+        height: 'toggle'
+      })
       $("#listItem").animate({
         fontSize: $('#listItem').css('font-size') == '35px' ? '50px' : '35px'
       });
@@ -58,6 +69,9 @@ $(document).ready(function() {
       listItem3.css("font-size", '35px');
       // $("listItem1").css('font-size', '35');
       // $("listItem3").css('font-size', '35');
+      $("#sidebar").animate({
+        height: 'toggle'
+      })
       $('#listItem2').animate({
         fontSize: $('#listItem2').css('font-size') == '35px' ? '50px' : '35px'
       });
@@ -66,6 +80,9 @@ $(document).ready(function() {
       $('#special3').toggle();
       $("#special2").hide();
       $("#special1").hide();
+      $("#sidebar").animate({
+        height: 'toggle'
+      })
       listItem.css("font-size", '35px');
       listItem2.css("font-size", '35px');
       $('#listItem3').animate({
