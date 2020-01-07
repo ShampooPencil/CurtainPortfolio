@@ -95,9 +95,14 @@ function navItemContentToggle(clickedNavItem) {
 $(".box").hover(function(){
   $(this).filter(':not(:animated)').animate({ width: "220px", height: "240px", textAlign: "center" });
 }, function() {
-  $(this).animate({ width: "150px", height: "140px", animation: "cubic-bezier(0.075, 0.82, 0.165, 1 "});
+  $(this).animate({ width: "150px", height: "140px"});
 });
-$('.navContent').animate({borderColor: 'green'});
+
+// $(".pushBorder").hover(function(){
+//   $(this).filter(':not(:animated)').animate({ width: "70%", height: "90%", textAlign: "center" });
+// }, function() {
+//   $(this).animate({ width: "70%", height: "140px"});
+// });
 
 
 $(".navButton").on("click", function() {
