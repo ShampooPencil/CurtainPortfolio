@@ -91,6 +91,13 @@ function navItemContentToggle(clickedNavItem) {
   }
 
 }
+/* for hovering over social network buttons */
+$(".box").hover(function(){
+  $(this).filter(':not(:animated)').animate({ width: "220px", height: "240px", textAlign: "center" });
+}, function() {
+  $(this).animate({ width: "150px", height: "140px", animation: "cubic-bezier(0.075, 0.82, 0.165, 1 "});
+});
+$('.navContent').animate({borderColor: 'green'});
 
 
 $(".navButton").on("click", function() {
@@ -101,11 +108,11 @@ $(document).ready(function() {
   $('#sidebar-btn').on('click', function() {
     $('#sidebar').toggleClass('visible');
   });
-  // $('#listItem').on('click', function(){
-    
-  // })
 });
 
 /* 12/26/19..... clicking on links are set. now, i want to put side bar in the site, but after i put the right
 content in the links after getting clicked on. Like, really put my work, education, 
 etc. but seriously looking great! Keep working on it!*/ 
+
+// 1/7/2020 ok so now im thinking fixing that dumb pic errors, and doing some cool hover and
+// making pics and social links bigger after hovering over them(or on them i mean)

@@ -188,18 +188,54 @@
 
   }
   
-  #special1, #special2, #special3{ 
+   #special1, #special2, #special3{ 
     display: none;
     color: white;
-    border: 2px white dotted;
-    border-top: none;
+    /* border: 4px white solid; */
+    /* border-top: none; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto; 
+    width: 80%;
+    transition: clip-path 0.6s linear;
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+  } 
+  .aboutBorder:after{
+    transition: clip-path 0.6s linear;
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+  }
+   .aboutBorder, .portfolioBorder, .contactBorder {  
+    /* Full width border and a clip-path visually cutting it down to the starting size */
+    /* display: none; */
+    color: white;
+    border: 4px white solid;
+    /* border-top: none; */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     /* margin-bottom: auto; */
-    width: 80%;
-    
-   }
+    width: 70%; 
+    /* border: solid 10px #FC5185;  */
+    clip-path: polygon( 
+      calc(0% + 5px) calc(0% + 5px), /* top left */
+      calc(100% - 5px) calc(0% + 5px), /* top right */
+      calc(100% - 5px) calc(100% - 5px), /* bottom right */
+      calc(0% + 5px) calc(100% - 5px) /* bottom left */
+    );
+    transition: clip-path 0.6s linear;
+  }
+ 
+  
+  .aboutBorder:hover, .portfolioBorder:hover, .contactBorder:hover {
+    /* Clip-path spanning the entire box so it's no longer hiding the full-width border. */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.6s linear;
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+  }
 
    p{
      text-align: center;
@@ -286,12 +322,12 @@
   text-decoration: none;
   border-radius: 50%;
   margin-right: 40px;
+  /* animation: cubic-bezier(0.075, 0.82, 0.165, 1) */
+  align-content: center;
 }
 
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
+
+
 
 /* Set a specific color for each brand */
 
