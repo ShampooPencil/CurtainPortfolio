@@ -93,16 +93,25 @@ function navItemContentToggle(clickedNavItem) {
 }
 /* for hovering over social network buttons */
 $(".box").hover(function(){
-  $(this).filter(':not(:animated)').animate({ width: "220px", height: "240px", textAlign: "center" });
+  $(this).filter(':not(:animated)').animate({ width: "220px", height: "200px" });
 }, function() {
   $(this).animate({ width: "150px", height: "140px"});
 });
 
-// $(".pushBorder").hover(function(){
-//   $(this).filter(':not(:animated)').animate({ width: "70%", height: "90%", textAlign: "center" });
-// }, function() {
-//   $(this).animate({ width: "70%", height: "140px"});
-// });
+$(".aboutBorder, .portfolioBorder, .contactBorder").hover(function(){
+  $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px"});
+  // $(".listItem")(':not(:animated)').animate({fontSize: "65px" });
+  //$(this).filter(':not(:animated)').animate({ borderRadius: "30px"});
+//   $(this).stop().animate({
+//     borderRadius: '70px'
+// }, 1000);
+}, function() {
+  $(this).animate({ width: "70%", borderRadius: "0px"});
+  // $(".listItem").animate({ fontSize: "35px"});
+//   $(this).stop().animate({
+//     borderRadius: "0px"
+// }, 1000);
+});
 
 
 $(".navButton").on("click", function() {

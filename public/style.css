@@ -6,6 +6,7 @@
   body {
     font-family: 'Miriam Libre', sans-serif;
     min-width: 300px;
+    /* padding-bottom: 1000px; */
   }
   
   .menu-trigger {
@@ -220,10 +221,10 @@
     width: 70%; 
     /* border: solid 10px #FC5185;  */
     clip-path: polygon( 
-      calc(0% + 5px) calc(0% + 5px), /* top left */
-      calc(100% - 5px) calc(0% + 5px), /* top right */
-      calc(100% - 5px) calc(100% - 5px), /* bottom right */
-      calc(0% + 5px) calc(100% - 5px) /* bottom left */
+      calc(0% + 6px) calc(0% + 6px), /* top left */
+      calc(100% - 6px) calc(0% + 6px), /* top right */
+      calc(100% - 6px) calc(100% - 6px), /* bottom right */
+      calc(0% + 6px) calc(100% - 6px) /* bottom left */
     );
     transition: clip-path 0.6s linear;
   }
