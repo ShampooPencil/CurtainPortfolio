@@ -286,14 +286,17 @@
   #sidebar-btn {
     display: inline-block;
     vertical-align: middle;
-    width: 175px;
-    height: 130px;
+    width: 100px;
+    height: 75px;
     cursor: pointer;
     margin: 20px;
     position: absolute;
     right: -250px;
     top: 0px;
     background-color: white;
+    z-index: 101;
+    margin-right: 130px;
+    font-size: 50px;
   }
   
   #sidebar-btn span {
@@ -316,7 +319,8 @@
 .fa {
   padding: 40px;
   /* font-size: 30px; */
-  width: 150px; 
+  width: 100px; 
+  height: 100px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
@@ -351,4 +355,13 @@
   color: black;
   font-size: 45px;
   text-align: center;
+  display:inline-block;
+  font-size: 40px;
+  line-height: 50px;
+  /* background-color:black; */
+  align-content: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: bottom;
 }
