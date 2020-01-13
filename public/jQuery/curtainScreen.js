@@ -54,19 +54,21 @@ function navItemContentToggle(clickedNavItem) {
 //$(document).ready(function () {
 /* for hovering over social network buttons */
 $(".box").hover(function () {
-  $("#sidebar-btn").filter(':not(:animated)').css({position: "fixed", right: "-375px"}).animate({left: "175px"});
+  $("#sidebar-btn").filter(':not(:animated)').css({ position: "fixed", right: "-375px" }).animate({ left: "175px" });
   //$(this).filter(':not(:animated)').animate({ width: "150px", height: "140px", fontSize: "50px"}, 200, 'linear' );
-  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "border": "2px solid white", "position": "inherit", "margin-right": '50px'}).animate({fontSize: "300%", borderRadius: "30px"
-  ,right: '40%',top: "40%", width: "125px", height: "125px" }, 300, 'linear');
+  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "border": "2px solid white", "position": "inherit", "margin-right": '50px' }).animate({
+    fontSize: "300%", borderRadius: "30px"
+    , right: '40%', top: "40%", width: "125px", height: "125px"
+  }, 300, 'linear');
   //$("#sidebar").animate({ width: "175px"}, 100, 'linear');
   //$(".fa").css({'margin-right': '0%', 'margin-top': "150%"});
   //$(this).filter(':not(:animated)').css({border: '2 solid #f37736'}).animate({borderRadius: "30px"});
 }, function () {
   //$("#sidebar").animate({ width: "150"}, 100, 'linear');
-  $("#sidebar-btn").css({position: "absolute"}).animate({left: "175px"});
+  $("#sidebar-btn").css({ position: "absolute" }).animate({ left: "175px" });
   //$("#sidebar-btn").show();
   //$("sidebar-btn").animate({marginLeft: "100px", display: "show"}, 100, 'linear');
-  $(this).css({color: 'white', "border": "none"}).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px"}, 300, 'linear');
+  $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 300, 'linear');
   // $("#sidebar").animate({ width: "150"}, 100, 'linear');
   //$(".whiteHover").animate({ borderRadius: "0px"});
 });
@@ -92,6 +94,26 @@ $(document).ready(function () {
   $('#sidebar-btn').on('click', function () {
     $('#sidebar').toggleClass('visible');
   });
+});
+// $(document).ready(function () {
+//   $('#crossIcon').on('click', function () {
+//     if ($(this).css('color', 'black')) {
+//       $(this).css('color', 'white');
+//     } else if ($(this).css('color', 'white')) {
+//       $(this).css('color', 'black');
+//     }
+//   });
+// });
+$(document).ready(function () {
+  function iconChange() {
+    // $('.menu-trigger').on('click', function () {
+    if ($('.menu-trigger').css('color', 'white')) {
+      $(this).css('color', 'black');
+    } else if ($('.menu-trigger').css('color', 'black')) {
+      $(this).css('color', 'white');
+    }
+    // });
+  }
 });
 
 /* 12/26/19..... clicking on links are set. now, i want to put side bar in the site, but after i put the right
