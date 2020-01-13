@@ -263,7 +263,7 @@
   }
   
   #sidebar {
-    width: 150px;
+    width: 175px;
     background: #2c3e50;
     position: absolute;
     height: 100%;
@@ -300,17 +300,18 @@
   #sidebar-btn {
     display: inline-block;
     vertical-align: middle;
-    width: 100px;
+    /* width: 100px; */
     height: 75px;
     cursor: pointer;
     margin: 20px;
-    position: absolute;
-    right: -250px;
+    right: -375px;
+    left: 175px;
     top: 0px;
     background-color: white;
     z-index: 100;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     font-size: 50px;
+    position: absolute;
   }
   
   #sidebar-btn span {
@@ -351,6 +352,7 @@
 
 
 
+
 /* Set a specific color for each brand */
 
 /* Facebook */
@@ -362,16 +364,19 @@
   background: #3B5998;
   color: white;
   z-index: 80;
+  text-align: center;
 }
 .fa-linkedin {
   background: #007bb5;
   color: white;
   z-index: 80;
+  text-align: center;
 }
 .fa-github{
   background: black;
   color: white;
   z-index: 80;
+  text-align: center;
 }
 #fa_compass{
   color: black;
