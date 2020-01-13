@@ -33,49 +33,7 @@ $(document).ready(function () {
 //         do if/else kind of thing that if visisble click on the button or else do basically 
 //         nothing. ok still looking good though.
 //for expanding the list items HOME, ABOUT etc.
-//   $(document).ready(function(){
-//     var listItem = $('#listItem');
-//     var listItem2 = $('#listItem2');
-//     var listItem3 = $('#listItem3');
-//     var sideBar = $("#sideBar");
-//     var sideBarBtn = $("#sidebar-btn");
-//     $("#button-1").click(function(){
-//       $("#special1").toggle();
-//       $("#special2").hide();
-//       $("#special3").hide();
-//       //$( "li" ).height( "50px" );
-//       // var text_input = $('#button-1');
-//       // text_input.css("font-size", "50px");
-//       listItem2.css("font-size", '35px');
-//       listItem3.css("font-size", '35px');
-//       $("#listItem").animate({
-//         fontSize: $('#listItem').css('font-size') == '35px' ? '50px' : '35px'
-//       });
-//     })
 
-//     $("#button-2").click(function(){
-//       $('#special2').toggle();
-//       $("#special1").hide();
-//       $("#special3").hide();
-//       // var listItem = $('#listItem');
-//       listItem.css("font-size", '35px');
-//       listItem3.css("font-size", '35px');
-//       $('#listItem2').animate({
-//         fontSize: $('#listItem2').css('font-size') == '35px' ? '50px' : '35px'
-//       });
-//     });
-//     $("#button-3").click(function(){
-//       $('#special3').toggle();
-//       $("#special2").hide();
-//       $("#special1").hide();
-//       listItem.css("font-size", '35px');
-//       listItem2.css("font-size", '35px');
-//       $('#listItem3').animate({
-//         fontSize: $('#listItem3').css('font-size') == '35px' ? '50px' : '35px'
-//       });
-//     });
-
-// });
 
 function navItemContentToggle(clickedNavItem) {
   $(clickedNavItem)
@@ -91,34 +49,32 @@ function navItemContentToggle(clickedNavItem) {
   }
 
 }
+/////////////////i have to make the btns tad bigger on the hover....it would help more. i think thats the problem
+
+//$(document).ready(function () {
 /* for hovering over social network buttons */
 $(".box").hover(function () {
-  $("#sidebar").filter(':not(:animated)').animate({width: "200px"}, 100, 'linear');
-  $("#sidebar-btn").filter(':not(:animated)').animate({marginLeft: "300px"});
-  $(this).filter(':not(:animated)').animate({ width: "150px", height: "140px", fontSize: "45px"}).css("text-align", "center");
-  //$("#sidebar-btn").filter(':not(:animated)').animate({widthRight: "200px"});
-  //$("#sidebar").filter(':not(:animated)').animate({width: "200px"});
+  $("#sidebar-btn").filter(':not(:animated)').animate({position: "initial", marginLeft: "400px"},100, 'linear');
+  //$(this).filter(':not(:animated)').animate({ width: "150px", height: "140px", fontSize: "50px"}, 200, 'linear' );
+  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "border": "2px solid white", "position": "inherit", "margin-right": '50px'}).animate({fontSize: "300%", borderRadius: "30px"
+  ,right: '40%',top: "40%", width: "125px", height: "125px" }, 300, 'linear');
+  $("#sidebar").animate({ width: "175px"}, 100, 'linear');
+  //$(".fa").css({'margin-right': '0%', 'margin-top': "150%"});
+  //$(this).filter(':not(:animated)').css({border: '2 solid #f37736'}).animate({borderRadius: "30px"});
 }, function () {
   $("#sidebar").animate({ width: "150"}, 100, 'linear');
-  $("sidebar-btn").animate({marginLeft: "100px"});
-  $(this).animate({ width: "100px", height: "100px", fontSize: "25px"}).css("text-align", "center");
-  //$("#sidebar").animate({ width: "150"})
+  $("sidebar-btn").animate({marginLeft: "100px"}, 100, 'linear');
+  $(this).css({color: 'white', "border": "none"}).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px"}, 300, 'linear');
+  // $("#sidebar").animate({ width: "150"}, 100, 'linear');
+  //$(".whiteHover").animate({ borderRadius: "0px"});
 });
+//})
 
+//about port and contact animated hovers
 $(".aboutBorder, .portfolioBorder, .contactBorder").hover(function () {
   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px" });
-  
-  // $(".listItem")(':not(:animated)').animate({fontSize: "65px" });
-  //$(this).filter(':not(:animated)').animate({ borderRadius: "30px"});
-  //   $(this).stop().animate({
-  //     borderRadius: '70px'
-  // }, 1000);
 }, function () {
   $(this).animate({ width: "70%", borderRadius: "0px" });
-  // $(".listItem").animate({ fontSize: "35px"});
-  //   $(this).stop().animate({
-  //     borderRadius: "0px"
-  // }, 1000);
 });
 
 
