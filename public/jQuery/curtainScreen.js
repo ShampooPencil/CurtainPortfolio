@@ -54,29 +54,35 @@ function navItemContentToggle(clickedNavItem) {
 //$(document).ready(function () {
 /* for hovering over social network buttons */
 $(".box").hover(function () {
-  $("#sidebar-btn").filter(':not(:animated)').css({ position: "fixed", right: "-375px" }).animate({ left: "175px" });
+  $("#sidebar-btn").filter(':not(:animated)').css({ opacity: '0.8', position: "absolute" /*right: "-375px"*/ });
   //$(this).filter(':not(:animated)').animate({ width: "150px", height: "140px", fontSize: "50px"}, 200, 'linear' );
   $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "border": "2px solid white", "position": "inherit", "margin-right": '50px' }).animate({
     fontSize: "300%", borderRadius: "30px"
     , right: '40%', top: "40%", width: "125px", height: "125px"
-  }, 300, 'linear');
-  //$("#sidebar").animate({ width: "175px"}, 100, 'linear');
-  //$(".fa").css({'margin-right': '0%', 'margin-top': "150%"});
-  //$(this).filter(':not(:animated)').css({border: '2 solid #f37736'}).animate({borderRadius: "30px"});
+  }, 200, 'linear');
 }, function () {
-  //$("#sidebar").animate({ width: "150"}, 100, 'linear');
   $("#sidebar-btn").css({ position: "absolute" }).animate({ left: "175px" });
-  //$("#sidebar-btn").show();
-  //$("sidebar-btn").animate({marginLeft: "100px", display: "show"}, 100, 'linear');
-  $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 300, 'linear');
-  // $("#sidebar").animate({ width: "150"}, 100, 'linear');
-  //$(".whiteHover").animate({ borderRadius: "0px"});
+  $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 200, 'linear');
 });
-// $("#sidebar-btn").click(function() {
-//   $(this).css({position: 'fixed', right: "-375px"});
-// })
-//})
 
+//using #socialLink:hover for opacity on the socialLinks..idk working the best and fastest so far
+$("#socialLinks").hover(function (){
+  ('.box').filter(':not(:animated)').animate({opacity: "0.1"});
+ }, function() {
+  ('.box').animate({opacity: "0"});
+})
+$("#socialText").hover(function (){
+  ("#socialText").append("<strong>Hi</strong>");
+}, function () {
+  ("#socialText").prepend("<strong></strong>");
+})
+
+// $("#myselfPic").hover(function () {
+//   $(this).filter(':not(:animated)').css({"border": "2px solid white"}).animate({ fontSize: "300%", borderRadius: "30px", right: '40%', top: "40%", width: "175px", height: "175px"
+// }, 200, 'linear');
+// }, function() {
+//   $(this).css({color: 'white', "border": "none" }).animate({ width: "100px", height: "100px"});
+// });
 
 //about port and contact animated hovers
 $(".aboutBorder, .portfolioBorder, .contactBorder").hover(function () {
@@ -95,26 +101,38 @@ $(document).ready(function () {
     $('#sidebar').toggleClass('visible');
   });
 });
-// $(document).ready(function () {
-//   $('#crossIcon').on('click', function () {
-//     if ($(this).css('color', 'black')) {
-//       $(this).css('color', 'white');
-//     } else if ($(this).css('color', 'white')) {
-//       $(this).css('color', 'black');
-//     }
-//   });
-// });
+
 $(document).ready(function () {
-  function iconChange() {
+function iconChange(){
     // $('.menu-trigger').on('click', function () {
     if ($('.menu-trigger').css('color', 'white')) {
       $(this).css('color', 'black');
     } else if ($('.menu-trigger').css('color', 'black')) {
       $(this).css('color', 'white');
     }
-    // });
-  }
+  // });
+}
 });
+
+// function animatethis(targetElement, speed) {
+//   $(targetElement).animate({ marginLeft: "+=50px"},
+//   {
+//       duration: speed,
+//       complete: function ()
+//       {
+//           targetElement.animate({ marginLeft: "-=50px" },
+//           {
+//               duration: speed,
+//               complete: function ()
+//               {
+//                   animatethis(targetElement, speed);
+//               }
+//           });
+//       }
+//   });
+// };
+
+// animatethis($('#socialArrow'), 5000);
 
 /* 12/26/19..... clicking on links are set. now, i want to put side bar in the site, but after i put the right
 content in the links after getting clicked on. Like, really put my work, education,

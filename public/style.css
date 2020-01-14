@@ -225,7 +225,7 @@
       /*calc(0% + 6px) calc(100% - 6px) /* bottom left */
     /* );
   }  */
-   .aboutBorder, .portfolioBorder, .contactBorder {  
+  #sidebar-btn, .aboutBorder, .portfolioBorder, .contactBorder {  
     /* Full width border and a clip-path visually cutting it down to the starting size */
     /* display: none; */
     color: white;
@@ -245,20 +245,51 @@
     );
     transition: clip-path 0.6s linear;
   }
-  .whiteHover{
+  /* .whiteHover{
     transition: clip-path 0.6s linear;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
+  } */
  
-  
-  .aboutBorder:hover, .portfolioBorder:hover, .contactBorder:hover {
+  #sidebar-btn:hover, .aboutBorder:hover, .portfolioBorder:hover, .contactBorder:hover {
     /* Clip-path spanning the entire box so it's no longer hiding the full-width border. */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: clip-path 0.6s linear;
     background:rgba(0,0,0,0.6);
     opacity: 1;
     text-align: center;
-    
+  }
+
+  .box{
+    /*color: white;*/
+      border: 4px none solid;
+      /* border-top: none; */
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      /* margin-bottom: auto; */
+      width: 70%; 
+      /* border: solid 10px #FC5185;  */
+      clip-path: polygon( 
+        calc(0% + 6px) calc(0% + 6px), /* top left */
+        calc(100% - 6px) calc(0% + 6px), /* top right */
+        calc(100% - 6px) calc(100% - 6px), /* bottom right */
+        calc(0% + 6px) calc(100% - 6px) /* bottom left */
+      );
+      transition: clip-path 0.5s linear;
+      cursor: default;
+  
+   } 
+  .box:hover{
+    /* Clip-path spanning the entire box so it's no longer hiding the full-width border. */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.5s linear;
+    /* background:rgba(0,0,0,0.2); */
+    /* opacity: 0.5; */
+    text-align: center;
+    cursor: pointer;
+  }
+  #myselfPic{
+    background-image: url("../public/images/myselfPic.jpg");
   }
 
    p{
@@ -287,22 +318,6 @@
     transition: left 0.7s ease;
   }
   
-  /* ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    list-style: none;
-    padding: 10px 0 10px 10px;
-    background: #46637F;
-    border-bottom: 1px solid #233140;
-  }
-  
-  li a {
-    text-decoration: none;
-    color: white;
-  } */
   
   #sidebar-btn {
     display: inline-block;
@@ -314,15 +329,16 @@
     right: -375px;
     left: 175px;
     top: 0px;
-    background-color: white;
+    background-color: transparent;
     z-index: 100;
     /* margin-right: 100px; */
-    font-size: 50px;
+    font-size: 70px;
     position: absolute;
+    color: white;
   }
   
   #sidebar-btn span {
-    background-color: white;
+    /* background-color: white; */
     height: 1px;
     display: block;
     margin-bottom: 5px;
@@ -367,14 +383,27 @@
   background: #3B5998;
   color: white;
 } */
+#face_Book, #link_In, #git_Hub{
+  background-color: brightness(100%)
+}
+#link_In:hover{
+  /* background: rgb(50, 75, 140); */
+  background: rgb(0, 110, 165);
+}
+#face_Book:hover{
+  background: rgb(40, 64, 116);
+}
+#git_Hub:hover{
+  background: rgb(26, 25, 25);
+}
 .fa-facebook {
-  background: #3B5998;
+  background: rgb(59, 89, 152);
   color: white;
   z-index: 80;
   text-align: center;
 }
 .fa-linkedin {
-  background: #007bb5;
+  background: rgb(0, 123, 181);
   color: white;
   z-index: 80;
   text-align: center;
@@ -398,4 +427,59 @@
   height: 50px;
   text-align: center;
   vertical-align: bottom;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.bounce, .fa-linkedin:hover, .fa-facebook:hover, .fa-github:hover{
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% { color: rgb(255, 0, 157); }
+  50% { color: rgb(0, 217, 255); }
+  100% { color: red; }
+  50% { color: purple}
+}
+@-moz-keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: rgb(0, 255, 242); }
+  50% { color: purple}
+}
+@-ms-keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: rgb(0, 255, 149); }
+  50% { color: purple}
+}
+@-o-keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: rgb(0, 217, 255); }
+  50% { color: purple}
+}
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: rgb(179, 255, 0); }
+  50% { color: purple}
 }
