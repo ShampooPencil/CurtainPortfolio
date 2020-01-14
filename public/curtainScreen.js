@@ -1,5 +1,15 @@
 
+function iconChange(){
+    // $('.menu-trigger').on('click', function () {
+    if ($('.menu-trigger').css('color', 'white')) {
+      $(this).css('color', 'black');
+    } else if ($('.menu-trigger').css('color', 'black')) {
+      $(this).css('color', 'white');
+    }
+  // });
+}
 $(document).ready(function () {
+  console.log("ugjghvjhg")
   $('.trigger').click(function () {
     var $this = $(this),
       notThis = $this.hasClass('open'),
@@ -89,6 +99,7 @@ $(".aboutBorder, .portfolioBorder, .contactBorder").hover(function () {
   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px" });
 }, function () {
   $(this).animate({ width: "70%", borderRadius: "0px" });
+
 });
 
 
@@ -102,17 +113,17 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-function iconChange(){
-    // $('.menu-trigger').on('click', function () {
-    if ($('.menu-trigger').css('color', 'white')) {
-      $(this).css('color', 'black');
-    } else if ($('.menu-trigger').css('color', 'black')) {
-      $(this).css('color', 'white');
-    }
-  // });
-}
-});
+// $(document).ready(function () {
+// function iconChange(){
+//     // $('.menu-trigger').on('click', function () {
+//     if ($('.menu-trigger').css('color', 'white')) {
+//       $(this).css('color', 'black');
+//     } else if ($('.menu-trigger').css('color', 'black')) {
+//       $(this).css('color', 'white');
+//     }
+//   // });
+// }
+// });
 
 // function animatethis(targetElement, speed) {
 //   $(targetElement).animate({ marginLeft: "+=50px"},
