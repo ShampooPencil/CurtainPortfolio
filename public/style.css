@@ -433,6 +433,7 @@
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
   padding: 10%;
+  margin: 0%;
 }
 
 @keyframes bounce {
