@@ -70,8 +70,10 @@ $(".box").hover(function () {
     fontSize: "300%", borderRadius: "30px"
     , right: '40%', top: "40%", width: "125px", height: "125px"
   }, 200, 'linear');
+  $(".meFace").filter(':not(:animated)').append('Thats me beautiful face');
 }, function () {
   $("#sidebar-btn").css({ position: "absolute" }).animate({ left: "175px" });
+  $(".meFace").empty();
   $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 200, 'linear');
 });
 
