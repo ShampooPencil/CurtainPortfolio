@@ -38,6 +38,10 @@ $(document).ready(function () {
     }
   });
 });
+// $( window ).bind("resize", function(){
+//   // Change the width of the div
+//   $(".pushBorder").css({display: "flex"});
+// });
 //1/5/2020 so i still need a way to figure when i click on about etc the side bar should move
 //         slide away. The only way i can think right now is if the sidebar is visible,
 //         do if/else kind of thing that if visisble click on the button or else do basically 
@@ -96,12 +100,16 @@ $("#socialText").hover(function (){
 // });
 
 //about port and contact animated hovers
-$(".button-1, .button-2, .button-3").hover(function () {
+$(".pushBorder").hover(function () {
   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
+  // $(".navContent").css({borderRadius: "inheret"});
 }, function () {
   $(this).animate({ width: "70%", borderRadius: "0px" });
 
 });
+// $(".pushBorder").on('click', function() {
+//   $(this).css("display", "inline-flex");s
+// })
 
 
 $(".navButton").on("click", function () {
