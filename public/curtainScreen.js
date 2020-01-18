@@ -52,7 +52,6 @@ function navItemContentToggle(clickedNavItem) {
   $(clickedNavItem).animate({
     fontSize: $(clickedNavItem).css("font-size") == "35px" ? "50px" : "35px"
   });
-
   if ($('#sidebar').hasClass('visible')) {
     // $('#sidebar-btn').click();
     $('#sidebar').removeClass('visible');
@@ -97,8 +96,8 @@ $("#socialText").hover(function (){
 // });
 
 //about port and contact animated hovers
-$(".aboutBorder, .portfolioBorder, .contactBorder").hover(function () {
-  $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px" });
+$(".button-1, .button-2, .button-3").hover(function () {
+  $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
 }, function () {
   $(this).animate({ width: "70%", borderRadius: "0px" });
 
