@@ -102,14 +102,28 @@ $("#socialText").hover(function (){
 //about port and contact animated hovers
 $(".pushBorder").hover(function () {
   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
-  // $(".navContent").css({borderRadius: "inheret"});
+  
 }, function () {
   $(this).animate({ width: "70%", borderRadius: "0px" });
-
+  //$(".portfolioBorder, contanctBorder, aboutBorder").animate({width: "70%", height: "70%"});
 });
-// $(".pushBorder").on('click', function() {
-//   $(this).css("display", "inline-flex");s
-// })
+
+//for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
+$(".aboutBorder").hover(function() {
+  $(".portfolioBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "5px"});
+}, function() {
+  $(".portfolioBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "13px"});
+});
+$(".portfolioBorder").hover(function() {
+  $(".aboutBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "5px"});
+}, function() {
+  $(".aboutBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "13px"});
+});
+$(".contactBorder").hover(function() {
+  $(".aboutBorder, .portfolioBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "5px"});
+}, function() {
+  $(".aboutBorder, .portfolioBorder").animate({width: "70%", height: "auto", fontSize: "13px"});
+});
 
 
 $(".navButton").on("click", function () {
