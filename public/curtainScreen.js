@@ -110,19 +110,21 @@ $(".pushBorder").hover(function () {
 
 //for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
 $(".aboutBorder").hover(function() {
-  $(".portfolioBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "5px"});
+  //$(this).filter(':not(:animated)').animate({padding: "5px"});
+  $(".portfolioBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
 }, function() {
-  $(".portfolioBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "13px"});
+  //$(this).animate({padding: "auto"});
+  $(".portfolioBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
 });
 $(".portfolioBorder").hover(function() {
-  $(".aboutBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "5px"});
+  $(".aboutBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
 }, function() {
-  $(".aboutBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "13px"});
+  $(".aboutBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
 });
 $(".contactBorder").hover(function() {
-  $(".aboutBorder, .portfolioBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "5px"});
+  $(".aboutBorder, .portfolioBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
 }, function() {
-  $(".aboutBorder, .portfolioBorder").animate({width: "70%", height: "auto", fontSize: "13px"});
+  $(".aboutBorder, .portfolioBorder").animate({width: "70%", height: "auto", fontSize: "15px"}), 200, 'linear';
 });
 
 
