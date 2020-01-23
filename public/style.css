@@ -223,6 +223,12 @@
     /* background-color: #f1f1f1; */
 
   }
+  /* .pushBorder.closeX{
+    display: none;
+  }
+  .pushBorder.closeX:hover{
+    display: inline;
+  } */
   
    #special1, #special2, #special3{ 
     display: none;
@@ -288,6 +294,7 @@
     background:rgba(0,0,0,0.6);
     opacity: 1;
     text-align: center;
+    content: \2612; 
   }
 
   .box{

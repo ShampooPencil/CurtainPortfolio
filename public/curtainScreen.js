@@ -110,20 +110,24 @@ $(".pushBorder").hover(function () {
 
 //for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
 $(".aboutBorder").hover(function() {
-  //$(this).filter(':not(:animated)').animate({padding: "5px"});
+  //$( ".aboutCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "40px", fontSize: "10px", margin: "0px 0px 0px 40px"});
   $(".portfolioBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
 }, function() {
-  //$(this).animate({padding: "auto"});
+  //$( ".aboutCloseX" ).empty();
   $(".portfolioBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
 });
 $(".portfolioBorder").hover(function() {
+  //$( ".portfolioCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "auto", fontSize: "10px"});
   $(".aboutBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
 }, function() {
+  //$( ".portfolioCloseX" ).empty();
   $(".aboutBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
 });
 $(".contactBorder").hover(function() {
+  //$( ".contactCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "auto", fontSize: "10px"});
   $(".aboutBorder, .portfolioBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
 }, function() {
+  //$( ".contactCloseX" ).empty();
   $(".aboutBorder, .portfolioBorder").animate({width: "70%", height: "auto", fontSize: "15px"}), 200, 'linear';
 });
 
