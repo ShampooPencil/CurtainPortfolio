@@ -99,37 +99,39 @@ $("#socialText").hover(function (){
 //   $(this).css({color: 'white', "border": "none" }).animate({ width: "100px", height: "100px"});
 // });
 
+//********this for minimizing the other boxes when hover over about/port/contact
+//not sure if i need it at all so right now ill just comment it out**** */
 //about port and contact animated hovers
-$(".pushBorder").hover(function () {
-  $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
+// $(".pushBorder").hover(function () {
+//   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
   
-}, function () {
-  $(this).animate({ width: "70%", borderRadius: "0px" });
-  //$(".portfolioBorder, contanctBorder, aboutBorder").animate({width: "70%", height: "70%"});
-});
+// }, function () {
+//   $(this).animate({ width: "70%", borderRadius: "0px" });
+//   //$(".portfolioBorder, contanctBorder, aboutBorder").animate({width: "70%", height: "70%"});
+// });
 
-//for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
-$(".aboutBorder").hover(function() {
-  //$( ".aboutCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "40px", fontSize: "10px", margin: "0px 0px 0px 40px"});
-  $(".portfolioBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
-}, function() {
-  //$( ".aboutCloseX" ).empty();
-  $(".portfolioBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
-});
-$(".portfolioBorder").hover(function() {
-  //$( ".portfolioCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "auto", fontSize: "10px"});
-  $(".aboutBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
-}, function() {
-  //$( ".portfolioCloseX" ).empty();
-  $(".aboutBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
-});
-$(".contactBorder").hover(function() {
-  //$( ".contactCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "auto", fontSize: "10px"});
-  $(".aboutBorder, .portfolioBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
-}, function() {
-  //$( ".contactCloseX" ).empty();
-  $(".aboutBorder, .portfolioBorder").animate({width: "70%", height: "auto", fontSize: "15px"}), 200, 'linear';
-});
+// //for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
+// $(".aboutBorder").hover(function() {
+//   //$( ".aboutCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "40px", fontSize: "10px", margin: "0px 0px 0px 40px"});
+//   $(".portfolioBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
+// }, function() {
+//   //$( ".aboutCloseX" ).empty();
+//   $(".portfolioBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
+// });
+// $(".portfolioBorder").hover(function() {
+//   //$( ".portfolioCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "auto", fontSize: "10px"});
+//   $(".aboutBorder, .contactBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
+// }, function() {
+//   //$( ".portfolioCloseX" ).empty();
+//   $(".aboutBorder, .contactBorder").animate({width: "70%", height: "auto", fontSize: "15px"}, 200, 'linear');
+// });
+// $(".contactBorder").hover(function() {
+//   //$( ".contactCloseX" ).prepend("x&nbsp;&nbsp;").css({top: "40px", left: "auto", fontSize: "10px"});
+//   $(".aboutBorder, .portfolioBorder").filter(':not(:animated)').animate({width: "40%", height: "auto", fontSize: "10px"}, 200, 'linear');
+// }, function() {
+//   //$( ".contactCloseX" ).empty();
+//   $(".aboutBorder, .portfolioBorder").animate({width: "70%", height: "auto", fontSize: "15px"}), 200, 'linear';
+// });
 
 
 $(".navButton").on("click", function () {
