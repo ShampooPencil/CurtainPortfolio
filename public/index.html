@@ -2,304 +2,341 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./style.css" /> 
-    <head>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-        <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-        <title>CodePen - Curtain Menu</title>
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0"/>
-        <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-        <style>
-          * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          font-family: 'Miriam Libre', sans-serif;
-          min-width: 300px;
-        }
-        
-        .menu-trigger {
-          cursor: pointer;
-          position: fixed;
-          padding: 1rem;
-          top: 0;
-          right: 0;
-          z-index: 100;
-          color: black;
-          -webkit-transform: rotate(225deg);
-                  transform: rotate(225deg);
-          transition: all 350ms ease;
-          text-decoration: underline;
-        }
-        .menu-trigger.open {
-          color: white;
-          -webkit-transform: rotate(0deg);
-                  transform: rotate(0deg);
-          text-decoration: underline;
-        }
-        
+  <link rel="stylesheet" href="./style.css" />
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon"
+      href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type=""
+      href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+      color="#111">
+    <title>CodePen - Curtain Menu</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Miriam Libre', sans-serif;
+        min-width: 300px;
+      }
+
+      .menu-trigger {
+        cursor: pointer;
+        position: fixed;
+        padding: 1rem;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        color: black;
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+        transition: all 350ms ease;
+        text-decoration: underline;
+      }
+
+      .menu-trigger.open {
+        color: white;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        text-decoration: underline;
+      }
+
+      header {
+        width: 100%;
+        height: 100vh;
+        float: left;
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(82, 245, 234);
+      }
+
+      @media (min-width: 500px) {
         header {
-          width: 100%;
-          height: 100vh;
-          float: left;
-          font-size: 1rem;
-          line-height: 1;
-          letter-spacing: 10px;
-          font-weight: 700;
-          text-transform: uppercase;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: rgb(82, 245, 234);
+          font-size: 2rem;
         }
-        @media (min-width: 500px) {
-          header {
-            font-size: 2rem;
-          }
-        }
-        header .display-block {
-          display: block;
-        }
-        
-        #nav-overlay {
-          overflow: hidden;
-          position: fixed;
-          width: 100%;
-          height: 100%;
-        }
-        #nav-overlay nav {
-          width: 100%;
-          overflow: hidden;
-          position: absolute;
-          top: -100%;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          list-style: none;
-          z-index: 90;
-          transition: top 350ms ease;
-        }
-        #nav-overlay nav li {
-          display: block;
-          text-align: center;
-          margin: 1rem 0;
-        }
-        #nav-overlay nav a, #nav-overlay nav a:visited {
-          font-size: 3rem;
-          font-weight: 400;
-          letter-spacing: 15px;
-          line-height: 1.25;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: white;
-        }
-        #nav-overlay nav a:hover, #nav-overlay nav a:focus, #nav-overlay nav a:visited, #nav-overlay nav a:visited:hover, #nav-overlay nav a:visited:focus, #nav-overlay nav a:visited:visited {
-          text-decoration: underline;
-        }
-        #nav-overlay.open nav {
-          top: 0;
-        }
-        #nav-overlay:before, #nav-overlay:after {
-          content: "";
-          position: absolute;
-          z-index: 50;
-          top: 0;
-          height: 100%;
-          width: 100%;
-          background: blue;
-          transition: transform 350ms, -webkit-transform 350ms;
-          background-image: url("../public/images/rainbowLines.jpg");
-          background-size: cover;
-          background-repeat: repeat;
-          background-position: center center;
-        }
+      }
+
+      header .display-block {
+        display: block;
+      }
+
+      #nav-overlay {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+
+      #nav-overlay nav {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        z-index: 90;
+        transition: top 350ms ease;
+      }
+
+      #nav-overlay nav li {
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      #nav-overlay nav a,
+      #nav-overlay nav a:visited {
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 15px;
+        line-height: 1.25;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+      }
+
+      #nav-overlay nav a:hover,
+      #nav-overlay nav a:focus,
+      #nav-overlay nav a:visited,
+      #nav-overlay nav a:visited:hover,
+      #nav-overlay nav a:visited:focus,
+      #nav-overlay nav a:visited:visited {
+        text-decoration: underline;
+      }
+
+      #nav-overlay.open nav {
+        top: 0;
+      }
+
+      #nav-overlay:before,
+      #nav-overlay:after {
+        content: "";
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: blue;
+        transition: transform 350ms, -webkit-transform 350ms;
+        background-image: url("../public/images/rainbowLines.jpg");
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center center;
+      }
+
+      #nav-overlay:before {
+        left: 0;
+        -webkit-transform: skew(50deg) translateX(-200%);
+        transform: skew(50deg) translateX(-200%);
+        clip: rect(auto 50vw auto auto);
+      }
+
+      @media (min-width: 500px) {
         #nav-overlay:before {
-          left: 0;
-          -webkit-transform: skew(50deg) translateX(-200%);
-                  transform: skew(50deg) translateX(-200%);
-          clip: rect(auto 50vw auto auto);
+          -webkit-transform: skew(50deg) translateX(-150%);
+          transform: skew(50deg) translateX(-150%);
         }
-        @media (min-width: 500px) {
-          #nav-overlay:before {
-            -webkit-transform: skew(50deg) translateX(-150%);
-                    transform: skew(50deg) translateX(-150%);
-          }
-        }
-        #nav-overlay.open:before {
-          -webkit-transform: skew(0) translateX(0%);
-                  transform: skew(0) translateX(0%);
-        }
+      }
+
+      #nav-overlay.open:before {
+        -webkit-transform: skew(0) translateX(0%);
+        transform: skew(0) translateX(0%);
+      }
+
+      #nav-overlay:after {
+        right: 0;
+        -webkit-transform: skew(50deg) translateX(200%);
+        transform: skew(50deg) translateX(200%);
+        clip: rect(auto auto auto 50vw);
+      }
+
+      @media (min-width: 500px) {
         #nav-overlay:after {
-          right: 0;
-          -webkit-transform: skew(50deg) translateX(200%);
-                  transform: skew(50deg) translateX(200%);
-          clip: rect(auto auto auto 50vw);
+          -webkit-transform: skew(50deg) translateX(150%);
+          transform: skew(50deg) translateX(150%);
         }
-        @media (min-width: 500px) {
-          #nav-overlay:after {
-            -webkit-transform: skew(50deg) translateX(150%);
-                    transform: skew(50deg) translateX(150%);
-          }
-        }
-        #nav-overlay.open:after {
-          -webkit-transform: skew(0) translateX(0%);
-                  transform: skew(0) translateX(0%);
-        }
-        
-        .icon {
-          display: inline-block;
-          font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
-          font-size: inherit;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-        .icon.icon-menu:before {
-          content: '\f136';
-          font-size: 4rem;
-        }
-        
-        .screen-reader-text {
-          position: absolute;
-          left: -999999em;
-        }
-        </style>
-        <script>
-          window.console = window.console || function(t) {};
-        </script>
-        <script>
-          if (document.location.search.match(/type=embed/gi)) {
-            window.parent.postMessage("resize", "*");
-          }
-        </script>
-        </head>
+      }
+
+      #nav-overlay.open:after {
+        -webkit-transform: skew(0) translateX(0%);
+        transform: skew(0) translateX(0%);
+      }
+
+      .icon {
+        display: inline-block;
+        font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .icon.icon-menu:before {
+        content: '\f136';
+        font-size: 4rem;
+      }
+
+      .screen-reader-text {
+        position: absolute;
+        left: -999999em;
+      }
+    </style>
+    <script>
+      window.console = window.console || function (t) { };
+    </script>
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
 </head>
 
 <body>
-    <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+  <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-    <span class="menu-trigger trigger icon icon-menu" id="crossIcon" rel="nav-overlay"></span>
-    <header>
-        <h1>
-            <span class="display-block firstName" style="text-align: center;"> A n d r e w </span>
-            <span class="display-block lastName">A r a m o u n i</span>
-            <!-- <span class="display-block portfolio">Portfolio</span> -->
-        </h1>
-    </header>
-    
-    <div id="nav-overlay">
-        <!-- ************************************************************************
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <span class="menu-trigger trigger icon icon-menu" id="crossIcon" rel="nav-overlay"></span>
+  <header>
+    <h1>
+      <span class="display-block firstName" style="text-align: center;"> A n d r e w </span>
+      <span class="display-block lastName">A r a m o u n i</span>
+      <!-- <span class="display-block portfolio">Portfolio</span> -->
+    </h1>
+  </header>
+
+  <div id="nav-overlay">
+    <!-- ************************************************************************
         *so maybe just making everything easier maybe just do a drop down block      *
         *on every li item(about, portfolio etc.). so all i have worry about it       *
         *express() server stuff. probaby be so much more easier for myself(for now!) *
         *****************************************************************************-->
-       <nav style="overflow: auto;">
-          
-            <div id="sidebar">
-                <br/>
-              
-                <ul id="socialLinks" style="padding: 25px; color: whitesmoke; padding-top: 0%;">
-                  <li class="speech" id='socialText' style="text-align:center; margin: 0%">Social Links</li>
-                  <li class="fa fa-arrow-down fa-2x bounce" id='socialArrow' style="text-align:center; margin: 0%; height: 50px;"></li>
-                  <li class="fa fa-linkedin box whiteHover" id="link_In" style="text-align:center;" onclick= 'window.location.href = ""' ></li>
-                  <li class="fa fa-github box whiteHover" id="git_Hub" style="text-align:center;"></li>
-                  <li class="fa fa-facebook box whiteHover" id="face_Book" style="text-align:center;"></li>
-                  <li class="fa box" id='myselfPic' style="text-align:center;"></li>
-                  <p class="fa fa-arrow-up fa-1x meFace" style="margin: 0%; padding: 1px"></p>
-                  
-                  <!-- <li><a id="git_hub" href="" class="fa fa-github box"></a></li>
+    <nav style="overflow: auto;">
+
+      <div id="sidebar">
+        <br />
+
+        <ul id="socialLinks" style="padding: 25px; color: whitesmoke; padding-top: 0%;">
+          <li class="speech" id='socialText' style="text-align:center; margin: 0%">Social Links</li>
+          <li class="fa fa-arrow-down fa-2x bounce" id='socialArrow'
+            style="text-align:center; margin: 0%; height: 50px;"></li>
+          <li class="fa fa-linkedin box whiteHover" id="link_In" style="text-align:center;"
+            onclick='window.location.href = ""'></li>
+          <li class="fa fa-github box whiteHover" id="git_Hub" style="text-align:center;"></li>
+          <li class="fa fa-facebook box whiteHover" id="face_Book" style="text-align:center;"></li>
+          <li class="fa box" id='myselfPic' style="text-align:center;"></li>
+          <p class="fa fa-arrow-up fa-1x meFace" style="margin: 0%; padding: 1px"></p>
+
+          <!-- <li><a id="git_hub" href="" class="fa fa-github box"></a></li>
                   <li><a id="face_Book"  href="" class="fa fa-facebook box"></a></li> -->
-                  <!-- <li><img src="../public/images/0.jpg"></li> -->
-                  <!-- <li><a  href="">Link 4</a></li> -->
-                </ul>
-             
-                <!-- <button type="button" class="btn btn-primary btn-lg" id="sidebar-btn"> -->
-                <!-- <button type="button" class="btn btn-primary btn-lg fa fa-compass fa-lg" id="sidebar-btn"><<i class="fa fa-compass fa-lg" id="fa_compass" style="text-align: center;"></i>></button> -->
-                <div>
-                    <!-- <button type="button" class="btn btn-primary" id="sidebar-btn"> <span class="navbar-toggler-icon"></span></button> -->
-                    
-                        <button class="navbar-toggler" type="button" id="sidebar-btn"  data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                            &#9781;
-                        </button>
-                      
-                </div>
-                  <!-- <span></span>
+          <!-- <li><img src="../public/images/0.jpg"></li> -->
+          <!-- <li><a  href="">Link 4</a></li> -->
+        </ul>
+
+        <!-- <button type="button" class="btn btn-primary btn-lg" id="sidebar-btn"> -->
+        <!-- <button type="button" class="btn btn-primary btn-lg fa fa-compass fa-lg" id="sidebar-btn"><<i class="fa fa-compass fa-lg" id="fa_compass" style="text-align: center;"></i>></button> -->
+        <div>
+          <!-- <button type="button" class="btn btn-primary" id="sidebar-btn"> <span class="navbar-toggler-icon"></span></button> -->
+
+          <button class="navbar-toggler" type="button" id="sidebar-btn" data-toggle="collapse"
+            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            &#9781;
+          </button>
+
+        </div>
+        <!-- <span></span>
                   <span></span>
                   <span></span> -->
-                
-            
-              </div>
-           
-          <!-- experiencing a side bar right now. Should be pretty smooth and easy....we will see -->
-  
-        <!--************************************************************************************-->
-            <li class="clickedNavItem"><a href="./index.html">Home</a></li>
-            <!-- <div style="height: 40px"></div> -->
-            <div class="aboutBorder pushBorder">
-            <li id="button-1" class="collapsible navButton" style="background:none; margin: 20px;"><span class="aboutCloseX">&nbsp;</span><span id=listItem>About</span></li>
-             <p id="special1" class="navContent">
-              Full-Stack boot camp certificate<br/>
-              Full-Stack programmer(Jr.)<br/>
-              Experienced programmer for 4 plus years<br/>
-              Superhero's, video games, sports, and hanging with friends<br/>
-              Hire me<br/>
-            </p>
-            </div>
-            <!-- <div style="height: 40px"><br/></div> -->
-            <div class="portfolioBorder pushBorder" style="text-align: center;">
-            <li id="button-2" class="collapsible navButton" style="background:none; margin: 20px;"><span class="portfolioCloseX">&nbsp;</span><span id=listItem2>Portfolio</span></li>
-            <p id="special2" class="navContent">
-                <a href="https://comicverse.herokuapp.com/" style="font-size: 13px; letter-spacing: 0px">Comicverse!</a><br/>
-                <a href="https://github.com/ShampooPencil/Train-Scheduler" style="font-size: 13px; letter-spacing: 0px">Train-Scheduler</a><br/>
-                <a href="https://github.com/ShampooPencil/homework-4-game" style="font-size: 13px; letter-spacing: 0px">Crystal Game</a><br/>
-
-            </p>
-              </div>
-              <!-- <div style="height: 40px"></div> -->
-              <div class="contactBorder pushBorder">
-            <li id="button-3" class="collapsible navButton" style="margin: 20px;"><span class="contactCloseX">&nbsp;</span><span id=listItem3>Contact</span></li>
-            <p id="special3" class="navContent">
-              EMAIL: aramouni8@gmail.com
-              PHONE#: 1-(440)-317-4444
-              GITHUB PROFILE: https://github.com/ShampooPencil
-                </p>
-              </div>
-            
-              <!-- <div class="moreSpaceForPage" style="height: 400px"></div> -->
-            
-              
-        </nav> 
-       
-      
-    </div>
-  
 
 
+      </div>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <!-- experiencing a side bar right now. Should be pretty smooth and easy....we will see -->
+
+      <!--************************************************************************************-->
+      <li class="clickedNavItem"><a href="./index.html">Home</a></li>
+      <!-- <div style="height: 40px"></div> -->
+      <div class="aboutBorder pushBorder">
+        <li id="button-1" class="collapsible navButton" style="background:none; margin: 20px;"><span
+            class="aboutCloseX">&nbsp;</span><span id=listItem>About</span></li>
+        <p id="special1" class="navContent">
+          Full-Stack boot camp certificate<br />
+          Full-Stack programmer(Jr.)<br />
+          Experienced programmer for 4 plus years<br />
+          Superhero's, video games, sports, and hanging with friends<br />
+          Hire me<br />
+        </p>
+      </div>
+
+      <div class="portfolioBorder pushBorder" style="text-align: center;">
+        <li id="button-2" class="collapsible navButton" style="background:none; margin: 20px;"><span
+            class="portfolioCloseX">&nbsp;</span><span id=listItem2>Portfolio</span></li>
+        <p id="special2" class="navContent" style="font-size: 15px">
+          <a href="https://comicverse.herokuapp.com/"
+            style="font-size: 15px;  letter-spacing: 0px">Comicverse!</a><br />
+          <a href="https://github.com/ShampooPencil/Train-Scheduler"
+            style="font-size: 15px;  letter-spacing: 0px">Train-Scheduler</a><br />
+          <a href="https://github.com/ShampooPencil/homework-4-game"
+            style="font-size: 15px;  letter-spacing: 0px">Crystal Game</a><br />
+
+        </p>
+      </div>
+
+      <div class="contactBorder pushBorder">
+        <li id="button-3" class="collapsible navButton" style="margin: 20px;"><span
+            class="contactCloseX">&nbsp;</span><span id=listItem3>Contact</span></li>
+        <p id="special3" style="font-size: 15px" class="navContent">
+          EMAIL: aramouni8@gmail.com<br />
+          PHONE#: 1-(440)-317-4444<br />
+          GITHUB PROFILE: https://github.com/ShampooPencil<br />
+        </p>
+      </div>
+   </nav>
+
+
+  </div>
+
+
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="./curtainScreen.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="./curtainScreen.js"></script>
 </body>
 
 </html>
