@@ -80,6 +80,15 @@ $(".box").hover(function () {
   $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 200, 'linear');
 });
 
+/*for hovering over the sidebar. White lines border should leave when not hovering sidebar thats the goal this function **/
+$("#sidebar").hover(function () {
+  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white"}).animate({ borderRightWidth: "7px"
+  }, 200, 'linear');
+}, function () {
+  // $(this).css({ "borderRight": "none" }).animate({ borderRightWidth: "0px" }, 200, 'linear');
+  $(this).animate({ borderRightWidth: "0px" }, 200, 'linear');
+});
+
 //using #socialLink:hover for opacity on the socialLinks..idk working the best and fastest so far
 $("#socialLinks").hover(function (){
   ('.box').filter(':not(:animated)').animate({opacity: "0.1"});
@@ -143,38 +152,6 @@ $(document).ready(function () {
     $('#sidebar').toggleClass('visible');
   });
 });
-
-// $(document).ready(function () {
-// function iconChange(){
-//     // $('.menu-trigger').on('click', function () {
-//     if ($('.menu-trigger').css('color', 'white')) {
-//       $(this).css('color', 'black');
-//     } else if ($('.menu-trigger').css('color', 'black')) {
-//       $(this).css('color', 'white');
-//     }
-//   // });
-// }
-// });
-
-// function animatethis(targetElement, speed) {
-//   $(targetElement).animate({ marginLeft: "+=50px"},
-//   {
-//       duration: speed,
-//       complete: function ()
-//       {
-//           targetElement.animate({ marginLeft: "-=50px" },
-//           {
-//               duration: speed,
-//               complete: function ()
-//               {
-//                   animatethis(targetElement, speed);
-//               }
-//           });
-//       }
-//   });
-// };
-
-// animatethis($('#socialArrow'), 5000);
 
 /* 12/26/19..... clicking on links are set. now, i want to put side bar in the site, but after i put the right
 content in the links after getting clicked on. Like, really put my work, education,

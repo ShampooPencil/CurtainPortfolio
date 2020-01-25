@@ -262,7 +262,7 @@
       /*calc(0% + 6px) calc(100% - 6px) /* bottom left */
     /* );
   }  */
-  #sidebar-btn, .aboutBorder, .portfolioBorder, .contactBorder {  
+  #sidebar-btn, .aboutBorder, .portfolioBorder, .contactBorder{  
     /* Full width border and a clip-path visually cutting it down to the starting size */
     /* display: none; */
     color: white;
@@ -282,12 +282,9 @@
     );
     transition: clip-path 0.6s linear;
   }
-  /* .whiteHover{
-    transition: clip-path 0.6s linear;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  } */
  
-  #sidebar-btn:hover, .aboutBorder:hover, .portfolioBorder:hover, .contactBorder:hover {
+ 
+  #sidebar-btn:hover, .aboutBorder:hover, .portfolioBorder:hover, .contactBorder:hover{
     /* Clip-path spanning the entire box so it's no longer hiding the full-width border. */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: clip-path 0.6s linear;
@@ -317,6 +314,7 @@
       cursor: default;
   
    } 
+
   .box:hover{
     /* Clip-path spanning the entire box so it's no longer hiding the full-width border. */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -338,18 +336,14 @@
     background: none;
   }
   
-  #sidebar {
+  #sidebar{
     width: 175px;
-    /* background: #2c3e50; */
     background-color: black;
     position: absolute;
-    /* height: 100%; */
     top: 0;
     left: -200px;
-    transition: left 0.5s ease;
     font-size: 20px;
     z-index: 103;
-    /* padding: 23px; */
   }
   
   #sidebar.visible {
