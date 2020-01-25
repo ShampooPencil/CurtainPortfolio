@@ -1,13 +1,14 @@
-
-function iconChange(){
+//add a hover and animate on the trigger to go to the main page(its the x in the top-right corner)
+$(".menu-trigger").hover(function () {
     // $('.menu-trigger').on('click', function () {
-    if ($('.menu-trigger').css('color', 'white')) {
-      $(this).css('color', 'white');
-    } else if ($('.menu-trigger').css('color', 'black')) {
-      $(this).css('color', 'white');
-    }
-  // });
-}
+      $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderLeft": "2px solid white", "borderRight": "2px solid white", "borderTop": "2px solid white", "borderBottom": "2px solid white" })
+      .animate({ borderLeftWidth: "5px", borderRightWidth: "5px", borderTopWidth: "5px", borderBottomWidth: "5px"
+      }, 200, 'linear');
+}, function () {
+  $(this).animate({ borderLeftWidth: "0px", borderRightWidth: "0px", borderTopWidth: "0px", borderBottomWidth: "0px"}, 200, 'linear');
+
+});
+
 $(document).ready(function () {
   console.log("ugjghvjhg")
   $('.trigger').click(function () {
