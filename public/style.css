@@ -22,7 +22,7 @@
     top: 0;
     right: 0;
     z-index: 100;
-    color: black;
+    color: rgb(238, 58, 58);
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
     transition: all 350ms ease;
