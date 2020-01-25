@@ -62,9 +62,7 @@ function navItemContentToggle(clickedNavItem) {
   }
 
 }
-/////////////////i have to make the btns tad bigger on the hover....it would help more. i think thats the problem
 
-//$(document).ready(function () {
 /* for hovering over social network buttons */
 $(".box").hover(function () {
   $("#sidebar-btn").filter(':not(:animated)').css({ opacity: '0.8', position: "absolute" /*right: "-375px"*/ });
@@ -75,19 +73,22 @@ $(".box").hover(function () {
   }, 200, 'linear');
   $(".meFace").filter(':not(:animated)').append('Thats me beautiful face');
 }, function () {
-  $("#sidebar-btn").css({ position: "absolute" }).animate({ left: "175px" });
+  $("#sidebar-btn").css({ position: "absolute" }).animate({ left: "150px" });//putting sidebar-btn so its right next to the main sidebar
   $(".meFace").empty();
   $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 200, 'linear');
 });
 
 /*for hovering over the sidebar. White lines border should leave when not hovering sidebar thats the goal this function **/
-$("#sidebar").hover(function () {
-  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white"}).animate({ borderRightWidth: "7px"
+
+ $("#sidebar, button").hover(function () {
+  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white", "borderTop": "2px solid white" })
+  .animate({ borderRightWidth: "5px", borderTopWidth: "5px"
   }, 200, 'linear');
+  $()
 }, function () {
-  // $(this).css({ "borderRight": "none" }).animate({ borderRightWidth: "0px" }, 200, 'linear');
-  $(this).animate({ borderRightWidth: "0px" }, 200, 'linear');
+  $(this).animate({ borderRightWidth: "0px", borderTopWidth: "0px"}, 200, 'linear');
 });
+
 
 //using #socialLink:hover for opacity on the socialLinks..idk working the best and fastest so far
 $("#socialLinks").hover(function (){
