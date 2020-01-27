@@ -12,10 +12,8 @@
       href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
       color="#111">
     <title>CodePen - Curtain Menu</title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -55,31 +53,13 @@
         text-decoration: underline;
       }
 
+/* right below is just to reverse the text in the main home page(because the bg flipped everything in main page) */
       .firstName,
       .lastName {
-        /* -webkit-transform:rotateY(180deg);
-        -moz-transform:rotateY(180deg);
-        -o-transform:rotateY(180deg);
-        -ms-transform:rotateY(180deg);
-        unicode-bidi:bidi-override;
-        direction:rtl; */
         -webkit-transform:rotateY(180deg);
         -moz-transform:rotateY(180deg);
         -o-transform:rotateY(180deg);
         -ms-transform:rotateY(180deg);
-        /* -webkit-transform:scaleX(1);
-        -moz-transform:scaleX(1);
-        -ms-transform:scaleX(1);
-        -o-transform:scaleX(1);
-        transform:scaleX(1);; */
-
-        /* position: absolute;
-        -moz-transform: scale(1) rotate(-10deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-        -webkit-transform: scale(1) rotate(-10deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-        -o-transform: scale(1) rotate(-10deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-        -ms-transform: scale(1) rotate(-10deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
-        transform: scale(1) rotate(-10deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg); */
-
       }
 
       header {
@@ -94,7 +74,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* background: black;  */
         background-image: url("../public/images/rainbowWall.jpg");
        -webkit-transform: scaleX(-1);
         -moz-transform: scaleX(-1);
@@ -263,8 +242,7 @@
     
     <h1 style="color: white;">
       <span class="display-block firstName" style="text-align: center;">A n d r e w</span>
-      <span class="display-block lastName" style="">A r a m o u n i</span>
-      <!-- <span class="display-block portfolio">Portfolio</span> -->
+      <span class="display-block lastName">A r a m o u n i</span>
     </h1>
   </header>
 </div>
@@ -277,7 +255,7 @@
         *****************************************************************************-->
     <nav style="overflow: auto;">
 
-      <div id="sidebar">
+      <div id="sidebar" class="mainSidebar">
         <br />
 
         <ul id="socialLinks" style="padding: 25px; color: whitesmoke; padding-top: 0%;">
@@ -307,11 +285,9 @@
 
       </div>
 
-      <!-- experiencing a side bar right now. Should be pretty smooth and easy....we will see -->
-
       <!--************************************************************************************-->
+      <!-- about paragraph and contents -->
       <li class="clickedNavItem"><a href="./index.html">Home</a></li>
-      <!-- <div style="height: 40px"></div> -->
       <div class="aboutBorder pushBorder">
         <li id="button-1" class="collapsible navButton" style="background:none; margin: 20px;"><span
             class="aboutCloseX">&nbsp;</span><span id=listItem>About</span></li>
@@ -323,7 +299,8 @@
           Hire me<br />
         </p>
       </div>
-
+      
+      <!-- portfolio paragraph and contents -->
       <div class="portfolioBorder pushBorder" style="text-align: center;">
         <li id="button-2" class="collapsible navButton" style="background:none; margin: 20px;"><span
             class="portfolioCloseX">&nbsp;</span><span id=listItem2>Portfolio</span></li>
@@ -336,11 +313,10 @@
             style="font-size: 15px;  letter-spacing: 0px">Crystal Game</a><br />
           <a href="https://github.com/ShampooPencil/HangManJS" style="font-size: 15px;  letter-spacing: 0px">HangMan
             Game!</a><br />
-
-
         </p>
       </div>
-
+      
+      <!-- contact paragraph and contents -->
       <div class="contactBorder pushBorder">
         <li id="button-3" class="collapsible navButton" style="margin: 20px;"><span
             class="contactCloseX">&nbsp;</span><span id=listItem3>Contact</span></li>

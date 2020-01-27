@@ -1,6 +1,5 @@
-//add a hover and animate on the trigger to go to the main page(its the x in the top-right corner)
+//add a hover for white bordering and animate on the trigger to go to the main page(its the x in the top-right corner)
 $(".menu-trigger").hover(function () {
-    // $('.menu-trigger').on('click', function () {
       $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderLeft": "2px solid white", "borderRight": "2px solid white", "borderTop": "2px solid white", "borderBottom": "2px solid white" })
       .animate({ borderLeftWidth: "5px", borderRightWidth: "5px", borderTopWidth: "5px", borderBottomWidth: "5px"
       }, 200, 'linear');
@@ -81,7 +80,7 @@ $(".box").hover(function () {
 
 /*for hovering over the sidebar. White lines border should leave when not hovering sidebar thats the goal this function **/
 
- $("#sidebar, button").hover(function () {
+ $("div.mainSidebar, button, nav").hover(function () {
   $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white", "borderTop": "2px solid white" })
   .animate({ borderRightWidth: "5px", borderTopWidth: "5px"
   }, 200, 'linear');
