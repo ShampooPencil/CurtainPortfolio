@@ -80,7 +80,7 @@ $(".box").hover(function () {
 
 /*for hovering over the sidebar. White lines border should leave when not hovering sidebar thats the goal this function **/
 
- $("div.mainSidebar, button, nav").hover(function () {
+ $("div.mainSidebar, button").hover(function () {
   $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white", "borderTop": "2px solid white" })
   .animate({ borderRightWidth: "5px", borderTopWidth: "5px"
   }, 200, 'linear');
