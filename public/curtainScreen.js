@@ -88,27 +88,27 @@ $("#myselfPic").hover(function () {
 
 /*for hovering over the sidebar. White lines border should leave when not hovering sidebar thats the goal this function **/
 
- $("div.mainSidebar, button").hover(function () {
-  $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white", "borderTop": "2px solid white" })
-  .animate({ borderRightWidth: "5px", borderTopWidth: "5px"
-  }, 200, 'linear');
-  $()
-}, function () {
-  $(this).animate({ borderRightWidth: "0px", borderTopWidth: "0px"}, 200, 'linear');
-});
+//  $("div.mainSidebar").hover(function () {
+//   $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white", "borderTop": "2px solid white" })
+//   .animate({ borderRightWidth: "5px", borderTopWidth: "5px"
+//   }, 200, 'linear');
+//   $()
+// }, function () {
+//   $(this).animate({ borderRightWidth: "0px", borderTopWidth: "0px"}, 200, 'linear');
+// });
 
 
 //using #socialLink:hover for opacity on the socialLinks..idk working the best and fastest so far
-$("#socialLinks").hover(function (){
-  ('.box').filter(':not(:animated)').animate({opacity: "0.1"});
- }, function() {
-  ('.box').animate({opacity: "0"});
-})
-$("#socialText").hover(function (){
-  ("#socialText").append("<strong>Hi</strong>");
-}, function () {
-  ("#socialText").prepend("<strong></strong>");
-})
+// $("#socialLinks").hover(function (){
+//   ('.box').filter(':not(:animated)').animate({opacity: "0.1"});
+//  }, function() {
+//   ('.box').animate({opacity: "0"});
+// })
+// $("#socialText").hover(function (){
+//   ("#socialText").append("<strong>Hi</strong>");
+// }, function () {
+//   ("#socialText").prepend("<strong></strong>");
+// })
 
 // $("#myselfPic").hover(function () {
 //   $(this).filter(':not(:animated)').css({"border": "2px solid white"}).animate({ fontSize: "300%", borderRadius: "30px", right: '40%', top: "40%", width: "175px", height: "175px"
