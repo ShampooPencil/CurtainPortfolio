@@ -370,7 +370,7 @@
     cursor: pointer;
     margin: 20px;
     right: -375px;
-    left: 150px;
+    left: 155px;
     top: 0px;
     background-color: transparent;
     z-index: 100;
@@ -378,6 +378,8 @@
     font-size: 70px;
     position: absolute;
     color: white;
+    border-left: none;
+
   }
   
   #sidebar-btn span {
