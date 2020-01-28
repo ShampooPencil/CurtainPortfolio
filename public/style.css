@@ -327,6 +327,10 @@
   #myselfPic{
     background-image: url("../public/images/myselfPic.jpg");
   }
+  /* #myselfPic:hover{
+    height: 150px;
+    width: 150px;
+  } */
 
    p{
      text-align: center;
@@ -343,7 +347,7 @@
     top: 0;
     left: -200px;
     font-size: 20px;
-    z-index: 103;
+    z-index: 100;
   }
   
   #sidebar.visible {
@@ -429,12 +433,14 @@
 #git_Hub:hover{
   background: rgb(26, 25, 25);
 }
+
 .fa-facebook {
   background: rgb(59, 89, 152);
   color: white;
   z-index: 80;
   text-align: center;
 }
+
 .fa-linkedin {
   background: rgb(0, 123, 181);
   color: white;
