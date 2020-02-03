@@ -59,9 +59,11 @@ function navItemContentToggle(clickedNavItem) {
   if ($('#sidebar').hasClass('visible')) {
     // $('#sidebar-btn').click();
     $('#sidebar').removeClass('visible');
+    //$("#sidebar").fadeOut(1000, function(){$("#sidebar").removeClass("visible", 1000)});
   }
 
 }
+
 
 /* for hovering over social network buttons */
 $(".box").hover(function () {
@@ -73,7 +75,7 @@ $(".box").hover(function () {
   }, 200, 'linear');
   //$(".meFace").filter(':not(:animated)').append('Thats mee beautiful face');
 }, function () {
-  $("#sidebar-btn").css({ position: "absolute" }).animate({ left: "155px" });//putting sidebar-btn so its right next to the main sidebar
+  $("#sidebar-btn").css({ position: "absolute", opacity: '1' }).animate({ left: "155px" });//putting sidebar-btn so its right next to the main sidebar
   //$(".meFace").empty();
   $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 200, 'linear');
 });

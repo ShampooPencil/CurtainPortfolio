@@ -348,6 +348,7 @@
     left: -200px;
     font-size: 20px;
     z-index: 100;
+    transition: ease 0.5s;
   }
   
   #sidebar.visible {
@@ -355,6 +356,7 @@
     transition: border 1s;
     border-right: 2px solid transparent;
     border-top: 2px solid transparent;
+    transition: ease 0.5s;
   }
   #sidebar.visible:hover {
     border-right: 3px solid white;
