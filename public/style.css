@@ -355,10 +355,12 @@
     left: 0px;
     transition: border 1s;
     border-right: 2px solid transparent;
+    border-top-right-radius: 0px;
     border-top: 2px solid transparent;
     transition: ease 0.5s;
   }
   #sidebar.visible:hover {
+    border-top-right-radius: 30px;
     border-right: 3px solid white;
     border-top: 3px solid white;
   }

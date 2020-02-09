@@ -88,18 +88,6 @@ $("#myselfPic").hover(function () {
   $(".meFace").empty();
 })
 
-/*for hovering over the sidebar. White lines border should leave when not hovering sidebar thats the goal this function **/
-
-//  $("div.mainSidebar").hover(function () {
-//   $(this).filter(':not(:animated)').css({/*'text-align': 'center',*/ "borderRight": "2px solid white", "borderTop": "2px solid white" })
-//   .animate({ borderRightWidth: "5px", borderTopWidth: "5px"
-//   }, 200, 'linear');
-//   $()
-// }, function () {
-//   $(this).animate({ borderRightWidth: "0px", borderTopWidth: "0px"}, 200, 'linear');
-// });
-
-
 //using #socialLink:hover for opacity on the socialLinks..idk working the best and fastest so far
 // $("#socialLinks").hover(function (){
 //   ('.box').filter(':not(:animated)').animate({opacity: "0.1"});
@@ -120,15 +108,15 @@ $("#myselfPic").hover(function () {
 // });
 
 //********this for minimizing the other boxes when hover over about/port/contact
-//not sure if i need it at all so right now ill just comment it out**** */
-//about port and contact animated hovers
-// $(".pushBorder").hover(function () {
-//   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
-  
-// }, function () {
-//   $(this).animate({ width: "70%", borderRadius: "0px" });
-//   //$(".portfolioBorder, contanctBorder, aboutBorder").animate({width: "70%", height: "70%"});
-// });
+// not sure if i need it at all so right now ill just comment it out**** */
+// about port and contact animated hovers
+//*********\/\/\/\/hoving over radious to 30px(rounded corners) then back to 0px(square corners) in this block of code\/\/\/
+$(".pushBorder").hover(function () {
+  $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
+}, function () {
+  $(this).animate({ width: "70%", borderRadius: "0px" });
+  //$(".portfolioBorder, contanctBorder, aboutBorder").animate({width: "70%", height: "70%"});
+});
 
 // //for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
 // $(".aboutBorder").hover(function() {
