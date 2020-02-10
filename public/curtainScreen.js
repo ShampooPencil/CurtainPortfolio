@@ -114,9 +114,11 @@ $("#myselfPic").hover(function () {
 $(".pushBorder").hover(function () {
   $(this).filter(':not(:animated)').animate({ width: "70%", borderRadius: "30px", display: "none" });
 }, function () {
-  $(this).animate({ width: "70%", borderRadius: "0px" });
+  $(this).animate({ width: "70%", borderRadius: "0px" }, 200, 'linear');
   //$(".portfolioBorder, contanctBorder, aboutBorder").animate({width: "70%", height: "70%"});
 });
+
+
 
 // //for this, just minimizes the other content boxes when user is hovering oonly on one link(like about or portfolio)
 // $(".aboutBorder").hover(function() {
