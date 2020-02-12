@@ -8,6 +8,8 @@ $(".menu-trigger").hover(function () {
 
 });
 
+
+
 $(document).ready(function () {
   console.log("ugjghvjhg")
   $('.trigger').click(function () {

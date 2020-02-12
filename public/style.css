@@ -207,10 +207,28 @@
 
 a#homeBtn{
   color: white;
+  margin-bottom: 40px;
+  font-size: 100px;
+  border-radius: 0px;
+  border: 0px white solid;
+  /* -webkit-transition: font-size .5s ease;
+  transition: font-size .5s ease; */
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  transition: all 350ms ease;
+  -webkit-transition: border .5s ease;
+  /* transition: border .5s ease; */
+}
+a#homeBtn:hover{
+  /* font-size: 80px; */
+  border: 3px white solid;
+  border-radius: 30px;
+  border-width: 10px;
+  /* border-radius: 30px white solid; */
 }
 
 /* div.pushBorder{ */
-  li.navButton, div.pushBorder, a#homeBtn{
+  li.navButton, div.pushBorder{
   display: inline-flex;
   letter-spacing: 0px;
   -webkit-transition: letter-spacing .5s ease;
@@ -219,7 +237,7 @@ a#homeBtn{
 }
 
 
-li.navButton:hover, div.pushBorder:hover, a#homeBtn:hover{
+li.navButton:hover, div.pushBorder:hover {
 letter-spacing: 10px;
 }
 
