@@ -82,11 +82,11 @@ $(".box").hover(function () {
   $(this).css({ color: 'white', "border": "none" }).animate({ width: "100px", height: "100px", fontSize: "25px", borderRadius: "0px" }, 200, 'linear');
 });
 
+
+//appending text on the a picture of me(the only pic of me)
 $("#myselfPic").hover(function () {
-  //$(this).filter(':not(:animated)').animate({height: '150px', width: '150px'});
   $(".meFace").filter(':not(:animated)').append('Thats mee beautiful face');
 }, function () {
-  //$(this).animate({height: '100px', width: '100px'});
   $(".meFace").empty();
 })
 

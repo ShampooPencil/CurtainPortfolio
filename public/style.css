@@ -292,11 +292,11 @@ letter-spacing: 10px;
    border-radius: inherit;
    letter-spacing: 0px;
  }
-  .aboutBorder:after{
+  /* .aboutBorder:after{
     transition: clip-path 0.6s linear;
     background:rgba(0,0,0,0.6);
     opacity: 1;
-  }
+  } */
   /* .whiteHover{
     transition: clip-path 0.6s linear;
     border: white;
