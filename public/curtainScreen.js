@@ -7,6 +7,12 @@ $(".menu-trigger").hover(function () {
   $(this).animate({ borderLeftWidth: "0px", borderRightWidth: "0px", borderTopWidth: "0px", borderBottomWidth: "0px"}, 200, 'linear');
 
 });
+//alerting the user that the mobile version is coming soon with quick setTimeout
+// var mobileAlert = function () {
+//   alert("MOBILE VERSION COMING SOON")
+// }
+// setTimeout(mobileAlert, 1000)
+
 
 
 
