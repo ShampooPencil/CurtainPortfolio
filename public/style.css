@@ -6,9 +6,6 @@
   
   body {
     font-family: 'Miriam Libre', sans-serif;
-    /* min-width: 3; */
-    /* margin-top: 200%; */
-    /* margin: 0; */
     height: 150%;
    
 }
@@ -158,17 +155,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  /* .icon.icon-menu:before {
-    content: '\f136';
-    font-size: 3rem;
-    color: black;
-    border: 10px solid black;
-  } */
-  /* span#crossIcon.icon.icon-menu::after{
-    color: white;
-  } */
-  
-  
 
   .screen-reader-text {
     position: absolute;
@@ -232,9 +218,6 @@
 
 #homeBtn{
   color: white;
-  /* padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 40px; */
   font-size: 100px;
   border-radius: 0px;
   border: 0px white solid;
@@ -249,38 +232,10 @@
   border-width: 5px;
 }
 
-  /* li.navButton, div.pushBorder{
-  display: inline-flex;
-  letter-spacing: 0px;
-  -webkit-transition: letter-spacing .5s ease;
-  transition: letter-spacing .5s ease;
-} */
-
-
 li.navButton:hover, div.pushBorder:hover {
 letter-spacing: 10px;
 }
 
-
-
-
-/* body {
-  background-color: lightgreen;
-}
-
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: lightblue;
-  }
-} */
-
-
-  
-  /* buactive, .collapsible:hover {
-    /* background-color: #555; */
-    /* text-decoration: underline; *//*
-  } */
-  
   .content {
     padding: 0 18px;
     display: none;
@@ -288,20 +243,10 @@ letter-spacing: 10px;
     /* background-color: #f1f1f1; */
     /* color: #cfcaca; */
   }
-
-  
-  /* .pushBorder.closeX{
-    display: none;
-  }
-  .pushBorder.closeX:hover{
-    display: inline;
-  } */
   
    #special1, #special2, #special3{ 
     display: none;
     color: white;
-    /* border: 4px white solid; */
-    /* border-top: none; */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -315,21 +260,7 @@ letter-spacing: 10px;
    border-radius: inherit;
    letter-spacing: 0px;
  }
-  /* .aboutBorder:after{
-    transition: clip-path 0.6s linear;
-    background:rgba(0,0,0,0.6);
-    opacity: 1;
-  } */
-  /* .whiteHover{
-    transition: clip-path 0.6s linear;
-    border: white;
-    clip-path: polygon( 
-      calc(0% + 6px) calc(0% + 6px), /* top left */
-      /* calc(100% - 6px) calc(0% + 6px), /* top right */
-     /* calc(100% - 6px) calc(100% - 6px), /* bottom right */
-      /*calc(0% + 6px) calc(100% - 6px) /* bottom left */
-    /* );
-  }  */
+
   #sidebar-btn, .aboutBorder, .portfolioBorder, .contactBorder{  
     /* Full width border and a clip-path visually cutting it down to the starting size */
     /* display: none; */
@@ -339,9 +270,7 @@ letter-spacing: 10px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: auto; */
     width: 70%; 
-    /* border: solid 10px #FC5185;  */
     clip-path: polygon( 
       calc(0% + 6px) calc(0% + 6px), /* top left */
       calc(100% - 6px) calc(0% + 6px), /* top right */
@@ -364,15 +293,11 @@ letter-spacing: 10px;
   
 
   .box{
-    /*color: white;*/
       border: 4px none solid;
-      /* border-top: none; */
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      /* margin-bottom: auto; */
       width: 70%; 
-      /* border: solid 10px #FC5185;  */
       clip-path: polygon( 
         calc(0% + 6px) calc(0% + 6px), /* top left */
         calc(100% - 6px) calc(0% + 6px), /* top right */
@@ -388,18 +313,12 @@ letter-spacing: 10px;
     /* Clip-path spanning the entire box so it's no longer hiding the full-width border. */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: clip-path 0.5s linear;
-    /* background:rgba(0,0,0,0.2); */
-    /* opacity: 0.5; */
     text-align: center;
     cursor: pointer;
   }
   #myselfPic{
     background-image: url("../public/images/myselfPic.jpg");
   }
-  /* #myselfPic:hover{
-    height: 150px;
-    width: 150px;
-  } */
 
    p{
      text-align: center;
@@ -433,17 +352,6 @@ letter-spacing: 10px;
     border-right: 3px solid white;
     border-top: 3px solid white;
   }
- 
-  /* a#homeBtn{
-   color: white;
-   letter-spacing: "0px";
-   transition: color 1s;
-   transition: ease 0.5s;
-} */
- /* a#homeBtn:hover{
-   color: rgb(70, 238, 18);
-   letter-spacing: "20px";
- } */
   
   #sidebar-btn {
     display: inline-block;
@@ -476,22 +384,15 @@ letter-spacing: 10px;
     width: 75%;
   }
 
-  /* sidebar links styles etc. */
-  /* #face_book #linked_in #git_hub {
-    font-size: 20px;
-  } */
-  
 /* Style all font awesome icons */
 .fa {
   padding: 40px;
-  /* font-size: 30px; */
   width: 100px; 
   height: 100px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
   margin-right: 40px;
-  /* animation: cubic-bezier(0.075, 0.82, 0.165, 1) */
   align-content: center;
   font-size: 25px;
   z-index: 100;
@@ -500,17 +401,8 @@ letter-spacing: 10px;
   text-align: center;
 }
 
-
-
-
-
 /* Set a specific color for each brand */
 
-/* Facebook */
-/* .fa-facebook {
-  background: #3B5998;
-  color: white;
-} */
 #face_Book, #link_In, #git_Hub{
   background-color: brightness(100%)
 }
